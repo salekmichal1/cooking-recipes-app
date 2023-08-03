@@ -1,0 +1,24 @@
+.theme-selector {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.theme-btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+  border-radius: 50%;
+  border: none;
+}
+
+.mode-button {
+  margin-left: 15px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}

@@ -1,0 +1,42 @@
+.create {
+  color: #555;
+  max-width: 480px;
+  margin: 60px auto;
+}
+.create label span {
+  display: block;
+  margin: 30px 0 10px;
+}
+.create p {
+  margin-top: 10px;
+  font-size: 0.8em;
+}
+.create .btn {
+  display: block;
+  width: 120px;
+  font-size: 1em;
+  color: #fff;
+  padding: 6px 20px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #aa0010;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 20px auto;
+}
+.ingredients {
+  display: flex;
+  align-items: center;
+}
+.ingredients .btn {
+  margin: 0 0 0 10px;
+  font-size: 16px;
+}
+
+.btn:hover {
+  filter: brightness(90%);
+}
+
+.create.dark {
+  color: #e4e4e4;
+}
