@@ -58,6 +58,11 @@
   padding: 8px;
   border-radius: 4px;
   margin: 20px auto 0;
+  transition: all 0.3s ease-out;
+}
+
+.recipe-list .card a:hover {
+  filter: brightness(120%);
 }
 
 /* dark mode */

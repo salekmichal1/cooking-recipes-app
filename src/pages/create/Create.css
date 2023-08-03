@@ -23,6 +23,7 @@
   cursor: pointer;
   text-decoration: none;
   margin: 20px auto;
+  transition: all 0.3s ease-out;
 }
 .ingredients {
   display: flex;
@@ -34,7 +35,7 @@
 }
 
 .btn:hover {
-  filter: brightness(90%);
+  filter: brightness(120%);
 }
 
 .create.dark {
