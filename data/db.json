@@ -2,30 +2,50 @@
   "recipes": [
     {
       "id": "1",
-      "title": "Veggie Stew",
+      "title": "Pasta with Tomato Sauce",
       "ingredients": [
-        "1 Carrot",
-        "1 Leek",
-        "200g Tofu",
-        "300ml Veg stock"
+        "8 ounces (225g) pasta",
+        "2 cups tomato sauce",
+        "1/4 cup grated Parmesan cheese",
+        "Salt and pepper to taste"
       ],
-      "method": "1. Pre-heat the oven to 200C/3C/gas 5. Place the carrot, leek and tofu in a large bowl. Add the stock and mix well. 2. Add the rest of the ingredients and mix well. 3. Place the mixture in a large bowl and cover with a lid. 4. Place the lid on the oven and cook for 40 minutes. 5. Serve with a slaw of your choice",
-      "cookingTime": "45 minutes"
+      "method": "1. Bring a large pot of salted water to a boil and cook the pasta according to the package instructions until al dente. Drain the pasta. 2. In a separate saucepan, heat the tomato sauce over medium heat until it simmers. 3. Add the cooked pasta to the tomato sauce and toss to coat the pasta evenly. 4. Season with salt and pepper to taste. Sprinkle the grated Parmesan cheese over the pasta. 5. Garnish with fresh basil leaves, if desired, and serve hot",
+      "cookingTime": "20 minutes"
     },
     {
       "id": "2",
-      "title": "Veggie Pizza",
+      "title": "Stir-Fried Vegetables",
       "ingredients": [
-        "1 Base",
-        "Tomata pasata",
-        "1 Green pepper",
-        "100g Mushrooms"
+        "1 tablespoon vegetable oil",
+        "1 cup broccoli florets",
+        "1 cup sliced bell peppers",
+        "1 cup sliced carrots",
+        "1 cup sliced mushrooms",
+        "2 tablespoons soy sauce",
+        "1 tablespoon oyster sauce",
+        "1 teaspoon sesame oil"
       ],
-      "method": "1. Pre-heat the oven to 200C/3C/gas 5. Add the pasata, green pepper and mushrooms to the base. Place the lid on the oven and cook for 30 minutes. 5. Serve with a slaw of your choice",
-      "cookingTime": "35 minutes"
+      "method": "Heat the vegetable oil in a large skillet or wok over medium-high heat. Add the broccoli, bell peppers, carrots, and mushrooms to the pan and stir-fry for 4-5 minutes or until the vegetables are tender-crisp. In a small bowl, mix the soy sauce and oyster sauce (if using). Pour the sauce mixture over the vegetables and stir-fry for an additional 1-2 minutes. If using sesame oil, drizzle it over the vegetables and toss to combine. Garnish with sesame seeds (if desired) and serve hot with steamed rice or noodles.",
+      "cookingTime": "15 minutes"
     },
     {
       "id": "3",
+      "title": "Banana Pancakes",
+      "ingredients": [
+        "1 ripe banana",
+        "1 cup flour",
+        "1 tablespoon sugar",
+        "1 teaspoon baking powder",
+        "1/4 teaspoon salt",
+        "1 cup milk",
+        "1 large egg ",
+        "1 tablespoon vegetable oil"
+      ],
+      "method": "In a mixing bowl, combine the mashed banana, flour, sugar, baking powder, and salt. In a separate bowl, whisk together the milk, egg, and vegetable oil. Gradually pour the wet ingredients into the dry ingredients and mix until just combined. Be careful not to overmix; a few lumps are okay. Heat a non-stick skillet or griddle over medium heat. Pour 1/4 cup of the pancake batter onto the hot surface for each pancake. Cook until bubbles form on the surface of the pancake and the edges look set, then flip and cook the other side until golden brown. Repeat with the remaining batter. Serve the pancakes warm with maple syrup, honey, or your favorite toppings.",
+      "cookingTime": "20 minutes"
+    },
+    {
+      "id": "4",
       "title": "Greek Salad",
       "ingredients": [
         "1 Onion",
@@ -34,37 +54,28 @@
         "Tomatoes",
         "Olive Oil"
       ],
-      "method": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse minima ex rem quis similique eum ratione quaerat, voluptas molestias ut repudiandae delectus voluptates. Eius esse at tenetur ab accusamus excepturi?",
+      "method": "Place 4 large vine tomatoes, cut into wedges, 1 peeled, deseeded and chopped cucumber, ½ a thinly sliced red onion, 16 Kalamata olives, 1 tsp dried oregano, 85g feta cheese chunks and 4 tbsp Greek extra virgin olive oil in a large bowl. Lightly season, then serve with crusty bread to mop up all of the juices.",
       "cookingTime": "35 minutes"
     },
     {
       "title": "Ciasto",
       "method": "tak jestttt",
       "cookingTime": "30 minutes",
-      "ingredients": [
-        "Ciasto",
-        "galaretka"
-      ],
+      "ingredients": ["Ciasto", "galaretka"],
       "id": "tvfSBjQ"
     },
     {
       "title": "aaaa",
       "method": "dfffffffffffffff",
       "cookingTime": "12 minutes",
-      "ingredients": [
-        "fds",
-        "fdsfs"
-      ],
+      "ingredients": ["fds", "fdsfs"],
       "id": "cZbb1qE"
     },
     {
       "title": "aaaa",
       "method": "dfffffffffffffff",
       "cookingTime": "12 minutes",
-      "ingredients": [
-        "fds",
-        "fdsfs"
-      ],
+      "ingredients": ["fds", "fdsfs"],
       "id": "HAZyDNc"
     },
     {

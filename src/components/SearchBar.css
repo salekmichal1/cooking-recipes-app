@@ -1,7 +1,78 @@
 .searchbar form {
   display: flex;
   align-items: center;
+  position: relative;
+  background: transparent;
+  border-radius: 14px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-.searchbar input {
-  margin-left: 10px;
+.searchbar #search,
+.searchbar button {
+  border: 0;
+  font-size: 1em;
+  color: #333;
+  height: 44px;
 }
+
+.searchbar #search {
+  outline: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all 0.3s cubic-bezier(0, 0, 0.43, 1.49);
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+}
+
+.searchbar button {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  background: transparent;
+  color: #e4e4e4;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+#search:not(:-moz-placeholder-shown) {
+  border-radius: 10px 0 0 10px;
+  width: calc(100% - 60px);
+}
+
+#search:not(:-ms-input-placeholder) {
+  border-radius: 10px 0 0 10px;
+  width: calc(100% - 60px);
+}
+
+#search:not(:placeholder-shown) {
+  border-radius: 10px 0 0 10px;
+  width: calc(100% - 60px);
+}
+#search:not(:-moz-placeholder-shown) + button {
+  display: block;
+}
+#search:not(:-ms-input-placeholder) + button {
+  display: block;
+}
+#search:not(:placeholder-shown) + button {
+  display: block;
+}
+
+/* #search:focus {
+  border-radius: 10px 0 0 10px;
+  width: calc(100% - 60px);
+}
+
+#search:focus + button {
+  display: block;
+} */

@@ -16,9 +16,11 @@ export default function ThemeSelector() {
   useEffect(() => {
     if (mode === 'bright') {
       document.documentElement.style.setProperty('--card-background', '#fff');
+      document.documentElement.style.setProperty('--tite-color', '#333');
     }
     if (mode === 'dark') {
       document.documentElement.style.setProperty('--card-background', '#555');
+      document.documentElement.style.setProperty('--tite-color', '#e4e4e4');
     }
   }, [mode]);
 
