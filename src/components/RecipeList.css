@@ -12,6 +12,8 @@
   border-radius: 12px;
   transition: all 0.2s ease-out;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .card::after {
@@ -57,7 +59,7 @@
   width: 120px;
   padding: 8px;
   border-radius: 8px;
-  margin: 20px auto 0;
+  margin: auto auto 0 auto;
   transition: all 0.3s ease-out;
 }
 

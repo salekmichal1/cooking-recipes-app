@@ -14,7 +14,7 @@ export default function Search() {
   const { data, isPending, error } = useFetch(url);
 
   return (
-    <div>
+    <div className="search">
       <h2 className="page-title">Recipes including: {query}</h2>
       {error && <p className="error">{error}</p>}
       {isPending && <p className="loading">loading...</p>}

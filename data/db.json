@@ -61,21 +61,30 @@
       "title": "Ciasto",
       "method": "tak jestttt",
       "cookingTime": "30 minutes",
-      "ingredients": ["Ciasto", "galaretka"],
+      "ingredients": [
+        "Ciasto",
+        "galaretka"
+      ],
       "id": "tvfSBjQ"
     },
     {
       "title": "aaaa",
       "method": "dfffffffffffffff",
       "cookingTime": "12 minutes",
-      "ingredients": ["fds", "fdsfs"],
+      "ingredients": [
+        "fds",
+        "fdsfs"
+      ],
       "id": "cZbb1qE"
     },
     {
       "title": "aaaa",
       "method": "dfffffffffffffff",
       "cookingTime": "12 minutes",
-      "ingredients": ["fds", "fdsfs"],
+      "ingredients": [
+        "fds",
+        "fdsfs"
+      ],
       "id": "HAZyDNc"
     },
     {
@@ -84,6 +93,24 @@
       "cookingTime": "22 minutes",
       "ingredients": [],
       "id": "VZOrtJO"
+    },
+    {
+      "title": "dsa",
+      "method": "ddddddddddddddddd",
+      "cookingTime": "22 minutes",
+      "ingredients": [
+        "ddd"
+      ],
+      "id": "PWSqRAA"
+    },
+    {
+      "title": "ff",
+      "method": "ffff",
+      "cookingTime": "111 minutes",
+      "ingredients": [
+        "fff"
+      ],
+      "id": "ZmLW2IY"
     }
   ]
 }
