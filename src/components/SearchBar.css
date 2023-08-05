@@ -7,8 +7,7 @@
   border-top: 1px solid #fff;
   border-right: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 .searchbar #search,
 .searchbar button {

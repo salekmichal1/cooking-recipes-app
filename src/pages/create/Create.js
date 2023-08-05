@@ -1,9 +1,11 @@
-import { useContext, useEffect, useState } from 'react';
-import { useFetch } from '../../hooks/useFetch';
+import { useContext, useState } from 'react';
+// import { useFetch } from '../../hooks/useFetch';
 import { useNavigate } from 'react-router-dom';
+import { ThemeContext } from '../../context/ThemeContext';
+import { addDoc, collection } from 'firebase/firestore';
+import { projectDatabase } from '../../firebase/config';
 
 import './Create.css';
-import { ThemeContext } from '../../context/ThemeContext';
 
 export default function Create() {
   const [title, setTitle] = useState('');
@@ -13,26 +15,42 @@ export default function Create() {
   const [ingredients, setIngredients] = useState([]);
 
   const navigate = useNavigate();
-  const { postData, data } = useFetch('http://localhost:3000/recipes', 'POST');
+  // const { postData, data } = useFetch('http://localhost:3000/recipes', 'POST');
 
   const { mode, color } = useContext(ThemeContext);
 
-  const handleSubmit = function (e) {
+  // const handleSubmit = function (e) {
+  //   e.preventDefault();
+  //   console.log(title, method, cookingTime, ingredients);
+  //   postData({
+  //     title,
+  //     method,
+  //     cookingTime: cookingTime + ' minutes',
+  //     ingredients,
+  //   });
+  // };
+
+  const handleSubmit = async function (e) {
     e.preventDefault();
-    console.log(title, method, cookingTime, ingredients);
-    postData({
+    const postRecipie = {
       title,
       method,
       cookingTime: cookingTime + ' minutes',
       ingredients,
-    });
+    };
+    try {
+      await addDoc(collection(projectDatabase, 'recipies'), postRecipie);
+      navigate('/');
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  useEffect(() => {
-    if (data) {
-      navigate('/');
-    }
-  }, [navigate, data]);
+  // useEffect(() => {
+  //   if (data) {
+  //     navigate('/');
+  //   }
+  // }, [navigate, data]);
 
   const handleAdd = function (e) {
     e.preventDefault();

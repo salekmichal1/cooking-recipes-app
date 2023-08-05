@@ -38,6 +38,7 @@
 .recipe-list .card h3 {
   color: #555;
   margin-bottom: 6px;
+  max-width: 290px;
 }
 .recipe-list .card p {
   color: #999;
@@ -61,6 +62,16 @@
   border-radius: 8px;
   margin: auto auto 0 auto;
   transition: all 0.3s ease-out;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  color: var(--tite-color);
+  cursor: pointer;
 }
 
 .recipe-list .card a:hover {

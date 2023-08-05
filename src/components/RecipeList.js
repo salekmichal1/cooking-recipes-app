@@ -1,8 +1,11 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
+import { deleteDoc, doc } from 'firebase/firestore';
+import { projectDatabase } from '../firebase/config';
 
 import './RecipeList.css';
+import { ReactComponent as DeleteIcon } from '../assets/delete.svg';
 
 export default function RecipeList({ recipes: data }) {
   const { mode, color } = useContext(ThemeContext);
@@ -10,6 +13,10 @@ export default function RecipeList({ recipes: data }) {
   if (data.length === 0) {
     return <p className="error">No recipe to load</p>;
   }
+
+  const handleClick = async function (id) {
+    await deleteDoc(doc(projectDatabase, 'recipies', id));
+  };
 
   return (
     <div className="recipe-list">
@@ -21,6 +28,10 @@ export default function RecipeList({ recipes: data }) {
           <Link to={`/recipes/${recipe.id}`} style={{ background: color }}>
             Cook this
           </Link>
+          <DeleteIcon
+            className="delete-icon"
+            onClick={() => handleClick(recipe.id)}
+          />
         </div>
       ))}
     </div>
