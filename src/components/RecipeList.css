@@ -28,7 +28,7 @@
 }
 
 .card:hover {
-  transform: translateY(-15px) rotate(2deg);
+  transform: translateY(-18px);
 }
 
 .card:hover::after {
@@ -68,7 +68,17 @@
   position: absolute;
   top: 14px;
   right: 10px;
-  width: 40px;
+  width: 36px;
+  height: auto;
+  color: var(--tite-color);
+  cursor: pointer;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 16px;
+  right: 50px;
+  width: 32px;
   height: auto;
   color: var(--tite-color);
   cursor: pointer;

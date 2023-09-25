@@ -45,7 +45,12 @@ export default function Home() {
   return (
     <div className="home">
       {error && <p className="error">{error}</p>}
-      {isPending && <p className="loading">loading...</p>}
+      {isPending && (
+        <div className="pending-overlay">
+          <p className="loading">Loading</p>
+          <div className="loader"> </div>
+        </div>
+      )}
       {data && <RecipeList recipes={data} />}
     </div>
   );

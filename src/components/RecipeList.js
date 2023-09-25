@@ -1,13 +1,16 @@
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
 import { deleteDoc, doc } from 'firebase/firestore';
 import { projectDatabase } from '../firebase/config';
 
 import './RecipeList.css';
 import { ReactComponent as DeleteIcon } from '../assets/delete.svg';
+import { ReactComponent as EditIcon } from '../assets/edit.svg';
 
 export default function RecipeList({ recipes: data }) {
+  const navigate = useNavigate();
+
   const { mode, color } = useContext(ThemeContext);
 
   if (data.length === 0) {
@@ -31,6 +34,12 @@ export default function RecipeList({ recipes: data }) {
           <DeleteIcon
             className="delete-icon"
             onClick={() => handleClick(recipe.id)}
+          />
+          <EditIcon
+            className="edit-icon"
+            onClick={() => {
+              navigate(`/edit/${recipe.id}`);
+            }}
           />
         </div>
       ))}

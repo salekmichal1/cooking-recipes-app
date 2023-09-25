@@ -3,6 +3,7 @@
 :root {
   --card-background: #fff;
   --tite-color: #e4e4e4;
+  --bacground-color: #dfdfdf;
 }
 
 /* base styles */
@@ -15,7 +16,7 @@ body {
   font-family: Raleway, sans-serif;
   margin: 0;
   font-size: 1.4em;
-  background: #dfdfdf;
+  background-color: #dfdfdf;
   color: #333;
 }
 h1,
@@ -47,6 +48,6 @@ textarea {
 .loading,
 .error {
   text-align: center;
-  margin: 40px auto;
+  margin: 20px auto;
   color: var(--tite-color);
 }

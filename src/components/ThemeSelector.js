@@ -17,10 +17,15 @@ export default function ThemeSelector() {
     if (mode === 'bright') {
       document.documentElement.style.setProperty('--card-background', '#fff');
       document.documentElement.style.setProperty('--tite-color', '#333');
+      document.documentElement.style.setProperty(
+        '--bacground-color',
+        '#dfdfdf'
+      );
     }
     if (mode === 'dark') {
       document.documentElement.style.setProperty('--card-background', '#555');
       document.documentElement.style.setProperty('--tite-color', '#e4e4e4');
+      document.documentElement.style.setProperty('--bacground-color', '#333');
     }
   }, [mode]);
 

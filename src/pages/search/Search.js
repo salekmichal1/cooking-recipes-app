@@ -54,7 +54,12 @@ export default function Search() {
     <div className="search">
       <h2 className="page-title">Recipes including: {query}</h2>
       {error && <p className="error">{error}</p>}
-      {isPending && <p className="loading">loading...</p>}
+      {isPending && (
+        <div className="pending-overlay">
+          <p className="loading">Loading</p>
+          <div className="loader"> </div>
+        </div>
+      )}
       {data && <RecipeList recipes={data} />}
     </div>
   );
