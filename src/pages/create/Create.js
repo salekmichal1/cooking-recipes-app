@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 // import { useFetch } from '../../hooks/useFetch';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
@@ -16,6 +16,7 @@ export default function Create() {
   const [isPending, setIsPending] = useState(false);
 
   const { mode, color } = useContext(ThemeContext);
+  const addIngredientInput = useRef();
 
   const navigate = useNavigate();
   const queryString = useLocation();
@@ -70,20 +71,24 @@ export default function Create() {
       ingredients,
     };
 
-    if (locationPath === 'create') {
-      try {
-        await addDoc(collection(projectDatabase, 'recipies'), postRecipie);
-        navigate('/');
-      } catch (err) {
-        console.error(err);
-      }
-    } else if (locationPath === 'edit') {
-      try {
-        const recipeCollection = doc(projectDatabase, 'recipies', id);
-        await updateDoc(recipeCollection, postRecipie);
-        navigate('/');
-      } catch (err) {
-        console.error(err);
+    if (ingredients.length === 0) {
+      addIngredientInput.current.focus();
+    } else {
+      if (locationPath === 'create') {
+        try {
+          await addDoc(collection(projectDatabase, 'recipies'), postRecipie);
+          navigate('/');
+        } catch (err) {
+          console.error(err);
+        }
+      } else if (locationPath === 'edit') {
+        try {
+          const recipeCollection = doc(projectDatabase, 'recipies', id);
+          await updateDoc(recipeCollection, postRecipie);
+          navigate('/');
+        } catch (err) {
+          console.error(err);
+        }
       }
     }
   };
@@ -103,6 +108,7 @@ export default function Create() {
     }
 
     setNewIngredient('');
+    addIngredientInput.current.focus();
   };
 
   const handleDelete = function (index) {
@@ -144,6 +150,7 @@ export default function Create() {
                   type="text"
                   onChange={e => setNewIngredient(e.target.value)}
                   value={newIngredient}
+                  ref={addIngredientInput}
                 />
                 <button
                   className="btn"
@@ -181,6 +188,11 @@ export default function Create() {
                 }
               })}
             </p>
+            {ingredients.length === 0 && (
+              <p className="ingredient-alert">
+                There must be ingredient in recipe
+              </p>
+            )}
             <p className="ingredient-tip">
               Click on ingredient to dalete from list
             </p>
