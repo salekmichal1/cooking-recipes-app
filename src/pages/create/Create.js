@@ -193,9 +193,11 @@ export default function Create() {
                 There must be ingredient in recipe
               </p>
             )}
-            <p className="ingredient-tip">
-              Click on ingredient to dalete from list
-            </p>
+            {ingredients.length !== 0 && (
+              <p className="ingredient-tip">
+                Click on ingredient to dalete from list
+              </p>
+            )}
             <label>
               <span>Recipe method:</span>
               <textarea
